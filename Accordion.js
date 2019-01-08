@@ -115,7 +115,7 @@ export default class Accordion extends Component {
     return (
       <View {...viewProps}>
         {this.props.sections.map((section, key) => (
-          <View key={key}>
+          <View key={key} pointerEvents={(section && section.disable)?'none':'auto'}>
             {this.props.renderSectionTitle(
               section,
               key,
